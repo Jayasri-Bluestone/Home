@@ -11,24 +11,24 @@
   --accent:      #74007A;
 }
 
-/* Dark mode (default) */
-.dark, :root {
-  --bg:       #0a0a0f;
-  --surface:  #111118;
-  --card:     #16161f;
-  --border:   rgba(255,255,255,0.08);
-  --text:     #f1f0ff;
-  --muted:    #9ca3af;
-}
-
-/* Light mode */
-.light {
+/* Light mode (default) */
+.light, :root {
   --bg:       #f8f7ff;
   --surface:  #ffffff;
   --card:     #f1effe;
   --border:   rgba(116,0,122,0.15);
   --text:     #1a1033;
   --muted:    #6b7280;
+}
+
+/* Dark mode */
+.dark {
+  --bg:       #0a0a0f;
+  --surface:  #111118;
+  --card:     #16161f;
+  --border:   rgba(255,255,255,0.08);
+  --text:     #f1f0ff;
+  --muted:    #9ca3af;
 }
 
 /* ─── Base ────────────────────────────────────────────────── */
@@ -54,15 +54,15 @@
 
   /* Glass card */
   .glass {
-    background: rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.7);
     backdrop-filter: blur(16px);
     border: 1px solid var(--border);
     border-radius: 1rem;
   }
 
-  .light .glass {
-    background: rgba(255,255,255,0.7);
-    border-color: rgba(116,0,122,0.12);
+  .dark .glass {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.08);
   }
 
   /* Brand button */
